@@ -7,6 +7,7 @@ import { HttpLoggerMiddleware } from './common/middlewares';
 import { TmdbModule } from './tmdb/tmdb.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { AnalysisModule } from './analysis/analysis.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { AppService } from './app.service';
     }),
     ConfigProviderModule,
     TmdbModule,
+    AnalysisModule,
   ],
   controllers: [AppController],
   providers: [AppService],

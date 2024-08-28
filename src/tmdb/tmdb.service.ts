@@ -18,11 +18,19 @@ export class TmdbService {
   async findKeywords(movieId: number) {
     const response = await this.movieDb.movieKeywords({ id: movieId });
 
-    return response.keywords?.map((keyword) => keyword.name);
+    if (!response.keywords) {
+      return [];
+    }
+
+    return response.keywords.map((keyword) => keyword.name);
   }
 
   async findReviews(movieId: number) {
     const response = await this.movieDb.movieReviews({ id: movieId });
+
+    if (!response.results) {
+      return [];
+    }
 
     return response.results;
   }

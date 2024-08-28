@@ -11,9 +11,9 @@ const createConfigProvider = <T>(key: string, type: 'string' | 'number' = 'strin
   };
 };
 
-export const SERVER_URL_PROVIDER = createConfigProvider<string>('SERVER_URL');
-export const NODE_ENV_PROVIDER = createConfigProvider<string>('NODE_ENV');
-export const PORT_PROVIDER = createConfigProvider<number>('PORT', 'number');
+export const SERVER_URL = createConfigProvider<string>('SERVER_URL');
+export const NODE_ENV = createConfigProvider<string>('NODE_ENV');
+export const PORT = createConfigProvider<number>('PORT', 'number');
 export const TMDB_API_KEY = createConfigProvider<string>('TMDB_API_KEY');
 export const TMDB_API_ACCESS_KEY = createConfigProvider<string>('TMDB_API_ACCESS_KEY');
 export const GOOGLE_SERVICE_CREDENTIALS = createConfigProvider<string>('GOOGLE_SERVICE_CREDENTIALS');
