@@ -12,7 +12,9 @@ review 와 keyword 들을 natural, sentiment, google cloud nlp api 등
 자연어를 분석해서 영화의 관람 등급을 다시 매겨보고 싶었다.
   
 ## Memo
+처음엔 twitter나 threads에서 영화를 검색하려했는데 api 비용 및 구성 문제 때문에 패스했음..!
+  
 자연어 분석 패키지들은 처음 사용해봤는데, 내부적으로 'score'가 뭘 의미하는지, 어떤식으로 동작하는지 잘 모르겠다 🤔
-
+  
 일단 검색을 반복하면서 값을 조정해보았는데.. 신뢰할 수 있는걸까 😂
  
