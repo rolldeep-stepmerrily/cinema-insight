@@ -37,8 +37,7 @@
     "natural": "^8.0.1",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1",
-    "sentiment": "^5.0.2",
-    "twitter-api-v2": "^1.17.2"
+    "sentiment": "^5.0.2"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",

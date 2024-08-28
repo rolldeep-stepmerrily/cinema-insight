@@ -20,4 +20,10 @@ export class TmdbService {
 
     return response.keywords?.map((keyword) => keyword.name);
   }
+
+  async findReviews(movieId: number) {
+    const response = await this.movieDb.movieReviews({ id: movieId });
+
+    return response.results;
+  }
 }

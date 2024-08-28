@@ -5,7 +5,6 @@ import Joi from 'joi';
 import { ConfigProviderModule } from './common/config-provider/config-provider.module';
 import { HttpLoggerMiddleware } from './common/middlewares';
 import { TmdbModule } from './tmdb/tmdb.module';
-import { TwitterModule } from './twitter/twitter.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -18,11 +17,6 @@ import { AppService } from './app.service';
         PORT: Joi.number().default(3070),
         TMDB_API_KEY: Joi.string().required(),
         TMDB_API_ACCESS_KEY: Joi.string().required(),
-        X_API_KEY: Joi.string().required(),
-        X_API_KEY_SECRET: Joi.string().required(),
-        X_BEARER_TOKEN: Joi.string().required(),
-        X_ACCESS_TOKEN: Joi.string().required(),
-        X_ACCESS_TOKEN_SECRET: Joi.string().required(),
         GOOGLE_SERVICE_CREDENTIALS: Joi.string().required(),
         GUEST_NAME: Joi.string().required(),
         GUEST_PASSWORD: Joi.string().required(),
@@ -33,7 +27,6 @@ import { AppService } from './app.service';
     }),
     ConfigProviderModule,
     TmdbModule,
-    TwitterModule,
   ],
   controllers: [AppController],
   providers: [AppService],
