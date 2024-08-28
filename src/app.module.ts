@@ -4,6 +4,7 @@ import Joi from 'joi';
 
 import { ConfigProviderModule } from './common/config-provider/config-provider.module';
 import { HttpLoggerMiddleware } from './common/middlewares';
+import { TmdbModule } from './tmdb/tmdb.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { HttpLoggerMiddleware } from './common/middlewares';
       validationOptions: { abortEarly: true },
     }),
     ConfigProviderModule,
+    TmdbModule,
   ],
 })
 export class AppModule implements NestModule {
