@@ -5,6 +5,9 @@ import Joi from 'joi';
 import { ConfigProviderModule } from './common/config-provider/config-provider.module';
 import { HttpLoggerMiddleware } from './common/middlewares';
 import { TmdbModule } from './tmdb/tmdb.module';
+import { TwitterModule } from './twitter/twitter.module';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 
 @Module({
   imports: [
@@ -30,7 +33,10 @@ import { TmdbModule } from './tmdb/tmdb.module';
     }),
     ConfigProviderModule,
     TmdbModule,
+    TwitterModule,
   ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
